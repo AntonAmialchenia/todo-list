@@ -48,6 +48,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 gitk --all&     (открыть графическую оболочку гита, чтобы позырить все коммиты)
+
 ctrl + insert (копировать в буфер обмена) 
+
 shift + insert (вставить из буфера обмена) 
+
 git checkout commit-number (переключится на нужный коммит)
