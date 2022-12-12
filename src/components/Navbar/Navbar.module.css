@@ -3,6 +3,7 @@
     background-color: grey;
 }
 .item {
+    cursor: pointer;
     color: #fff;
     transition: all 0.3s ease 0s;
 }

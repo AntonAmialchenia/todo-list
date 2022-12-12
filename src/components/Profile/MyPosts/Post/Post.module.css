@@ -1,0 +1,12 @@
+.post__image img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.item {
+    color: #fff;
+}
+
+.item.active {
+    color: gold;
+}

@@ -6,9 +6,3 @@
 .content__image img {
     width: 100%;
 }
-.item {
-    color: #fff;
-}
-.item.active {
-    color: gold;
-}
