@@ -1,7 +1,12 @@
 import React from "react";
 import cls from "./Post.module.css";
 
-const Post = () => {
+interface PostProps {
+  content: string
+  like: number
+}
+
+const Post = (props:PostProps) => {
   return (
     <>
       <div className={cls.post__image}>
@@ -10,7 +15,8 @@ const Post = () => {
           alt=""
         />
       </div>
-      <div className={`${cls.item} ${cls.active}`}>post 1</div>
+      <div className={`${cls.item} ${cls.active}`}>{props.content}</div>
+      <span>like {props.like}</span>
     </>
   );
 };
