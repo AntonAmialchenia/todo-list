@@ -1,0 +1,12 @@
+.dialogs__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+.link.active {
+    color: gold;
+}
