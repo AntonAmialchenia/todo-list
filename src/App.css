@@ -10,9 +10,12 @@
    "nav content"
    ;
     padding: 0 15px;
+    
 }
 
 .app-wrapper__content {
     grid-area: content;
-    background-color: #1b1983;
+    background-color: #bebec6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #bebec6;
 }

@@ -1,0 +1,19 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+}
+
+.dialogs__items {}
+
+.dialogs__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.dialogs__item.active {
+    color: gold;
+}
+.messages {}
+
+.messages__item:not(:last-child) {
+    margin-bottom: 10px;
+}
