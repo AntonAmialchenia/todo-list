@@ -1,12 +1,12 @@
-import React from "react";
-import cls from "./Post.module.css";
+import React from 'react';
+import cls from './Post.module.css';
 
 interface PostProps {
-  content: string
-  like: number
+  message: string;
+  likes: number;
 }
 
-const Post = (props:PostProps) => {
+const Post = (props: PostProps) => {
   return (
     <>
       <div className={cls.post__image}>
@@ -15,8 +15,8 @@ const Post = (props:PostProps) => {
           alt=""
         />
       </div>
-      <div className={`${cls.item} ${cls.active}`}>{props.content}</div>
-      <span>like {props.like}</span>
+      <div className={`${cls.item} ${cls.active}`}>{props.message}</div>
+      <span>like {props.likes}</span>
     </>
   );
 };

@@ -1,8 +1,13 @@
-import React from "react";
-// import cls from './MyPosts.module.css'
-import Post from "./Post/Post";
+import React from 'react';
+
+import Post from './Post/Post';
 
 const MyPosts = () => {
+  let PostsData = [
+    { id: '1', message: 'Hello!', likesCount: 5 },
+    { id: '3', message: 'Hello!', likesCount: 4 },
+  ];
+
   return (
     <>
       <div>
@@ -11,9 +16,8 @@ const MyPosts = () => {
         <button>Add post</button>
       </div>
       <div>
-        <Post content='Hello!' like={5} />
-        <Post content='Poka' like ={4} />
-        
+        <Post message={PostsData[0].message} likes={PostsData[0].likesCount} />
+        <Post message={PostsData[1].message} likes={PostsData[1].likesCount} />
       </div>
     </>
   );
