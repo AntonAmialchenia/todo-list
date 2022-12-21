@@ -3,10 +3,14 @@ import React from 'react';
 import Post from './Post/Post';
 
 const MyPosts = () => {
-  let PostsData = [
+  let posts = [
     { id: '1', message: 'Hello!', likesCount: 5 },
     { id: '3', message: 'Hello!', likesCount: 4 },
   ];
+
+  let postElement = posts.map((p) => (
+    <Post message={p.message} likes={p.likesCount} />
+  ));
 
   return (
     <>
@@ -15,10 +19,7 @@ const MyPosts = () => {
         <textarea></textarea>
         <button>Add post</button>
       </div>
-      <div>
-        <Post message={PostsData[0].message} likes={PostsData[0].likesCount} />
-        <Post message={PostsData[1].message} likes={PostsData[1].likesCount} />
-      </div>
+      <div>{postElement}</div>
     </>
   );
 };
