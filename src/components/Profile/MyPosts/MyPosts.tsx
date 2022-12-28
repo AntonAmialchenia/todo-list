@@ -1,20 +1,34 @@
-import React from 'react';
-import Data from '../../Data/data';
+import { title } from 'process';
+import React, { useState } from 'react';
+import { isNullishCoalesce } from 'typescript';
 import Post from './Post/Post';
 
-const MyPosts = () => {
- 
+type postsProps = {
+  messages: Array<{
+    message: string;
+    likesCount: number;
+    id: string;
+  }>;
+};
 
-  let postElement = Data.myposts.posts.map((p) => (
-    <Post message={p.message} likes={p.likesCount} />
+const MyPosts = (props: postsProps) => {
+  let postElement = props.messages.map((p) => (
+    <Post key={p.id} message={p.message} likes={p.likesCount} />
   ));
 
+
+
+  const [text, setText] = useState('');
+
+  let addPost = (e: any) => {
+    console.log(text);
+  };
   return (
     <>
       <div>
         <p>My posts</p>
-        <textarea></textarea>
-        <button>Add post</button>
+        <textarea onChange={(e) => setText(e.target.value)}></textarea>
+        <button onClick={addPost}>Add post</button>
       </div>
       <div>{postElement}</div>
     </>

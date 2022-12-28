@@ -7,7 +7,7 @@ const Data = {
   },
 
   dialogs: {
-    dialogs: [
+    items: [
       { id: '1', name: 'Anton' },
       { id: '3', name: 'Andrei' },
       { id: '3', name: 'Sergei' },

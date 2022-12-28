@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cls from './DialogItem.module.css';
 
-interface DialogProps {
+export interface DialogProps {
   name: string;
   id: string;
 }
