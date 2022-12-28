@@ -23,5 +23,14 @@ const Data = {
     ],
   },
 };
-
+export let addPost = (postMessage: string) => {
+  debugger
+  let newPost = {
+    id: '5',
+    message: postMessage,
+    likesCount: 0,
+  };
+  console.log(newPost);
+  Data.myposts.posts.push(newPost);
+};
 export default Data;

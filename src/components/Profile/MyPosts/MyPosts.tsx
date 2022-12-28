@@ -9,6 +9,7 @@ type postsProps = {
     likesCount: number;
     id: string;
   }>;
+  addPost: (e:string) => void
 };
 
 const MyPosts = (props: postsProps) => {
@@ -20,8 +21,9 @@ const MyPosts = (props: postsProps) => {
 
   const [text, setText] = useState('');
 
-  let addPost = (e: any) => {
-    console.log(text);
+  let addPost = () => {
+    debugger
+    props.addPost(text)
   };
   return (
     <>

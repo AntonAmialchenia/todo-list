@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import cls from './Dialogs.module.css';
 import { NavLink } from 'react-router-dom';
 import DialogItem from './DialogItem/DialogItem';
@@ -24,12 +24,11 @@ const Dialogs = (props: dialogsProps) => {
     <MessagesItem message={m.message} />
   ));
 
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
 
   let addPost = () => {
     console.log(text);
-    
-  }
+  };
 
   return (
     <div className={cls.dialogs}>

@@ -25,6 +25,7 @@ type AppProps = {
       }>;
     };
   };
+  addPost: (e: string) => void;
 };
 
 function App(props: AppProps) {
@@ -40,7 +41,9 @@ function App(props: AppProps) {
           />
           <Route
             path="/profile"
-            element={<Profile myposts={props.data.myposts} />}
+            element={
+              <Profile addPost={props.addPost} myposts={props.data.myposts} />
+            }
           />
         </Routes>
       </div>
