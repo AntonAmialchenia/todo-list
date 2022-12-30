@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from './../../render';
+
 const Data = {
   myposts: {
     posts: [
@@ -24,7 +26,6 @@ const Data = {
   },
 };
 export let addPost = (postMessage: string) => {
-  debugger
   let newPost = {
     id: '5',
     message: postMessage,
@@ -32,5 +33,6 @@ export let addPost = (postMessage: string) => {
   };
   console.log(newPost);
   Data.myposts.posts.push(newPost);
+  rerenderEntireTree(Data);
 };
 export default Data;

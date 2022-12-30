@@ -1,6 +1,5 @@
-import { title } from 'process';
 import React, { useState } from 'react';
-import { isNullishCoalesce } from 'typescript';
+
 import Post from './Post/Post';
 
 type postsProps = {
@@ -9,7 +8,7 @@ type postsProps = {
     likesCount: number;
     id: string;
   }>;
-  addPost: (e:string) => void
+  addPost: (e: string) => void;
 };
 
 const MyPosts = (props: postsProps) => {
@@ -17,13 +16,11 @@ const MyPosts = (props: postsProps) => {
     <Post key={p.id} message={p.message} likes={p.likesCount} />
   ));
 
-
-
   const [text, setText] = useState('');
 
   let addPost = () => {
-    debugger
-    props.addPost(text)
+    props.addPost(text);
+    setText('0');
   };
   return (
     <>

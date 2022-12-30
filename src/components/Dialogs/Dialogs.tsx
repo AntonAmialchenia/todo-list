@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import DialogItem from './DialogItem/DialogItem';
 import MessagesItem from './MessagesItem/MessagesItem';
 
-type dialogsProps = {
+export type dialogsProps = {
   dialogs: {
     items: Array<{
       name: string;

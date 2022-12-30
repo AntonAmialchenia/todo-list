@@ -8,7 +8,7 @@ interface MessagesItem {
 const MessagesItem = (props: MessagesItem) => {
   return (
     <>
-      <div className={cls.messages__item}>{props.message}</div>;
+      <div className={cls.messages__item}>{props.message}</div>
     </>
   );
 };

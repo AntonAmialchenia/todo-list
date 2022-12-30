@@ -12,7 +12,7 @@ type postsProfile = {
       id: string;
     }>;
   };
-  addPost: (e:string) => void
+  addPost: (e: string) => void;
 };
 
 const Profile = (props: postsProfile) => {

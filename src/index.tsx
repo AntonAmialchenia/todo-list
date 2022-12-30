@@ -1,16 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import Data, { addPost } from './components/Data/data';
+import Data from './components/Data/data';
+import { rerenderEntireTree } from './render';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
 
-root.render(
-  <BrowserRouter>
-    <App data={Data} addPost={addPost} />
-  </BrowserRouter>
-);
+rerenderEntireTree(Data);
